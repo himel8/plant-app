@@ -1,3 +1,4 @@
+import { FaStar } from "react-icons/fa";
 import Paragraph from "./global/Paragraph";
 import SubTitle from "./global/SubTitle";
 import Title from "./global/Title";
@@ -19,14 +20,19 @@ const testimonialData = [
 
 const Testimonial = () => {
   return (
-    <section className="py-6 custom__width">
-      <Title>OUR USERS SAY</Title>
-      <div className="py-10 flex justify-center items-center gap-6">
+    <section className="py-6 custom__width scroll-offset" id="testimonials">
+      <Title>Our Users Say</Title>
+      <div className="py-10 flex justify-center items-center gap-6 flex-wrap">
         {testimonialData.map((item, index) => (
           <div
             key={index}
-            className="custom__shadow p-6 rounded-lg w-full flex flex-col gap-3"
+            className="custom__shadow p-6 rounded-lg w-full flex flex-col gap-3 max-w-[350px]"
           >
+            <div className="flex justify-center items-center gap-1">
+              {[...Array(5)].map((item, index) => (
+                <FaStar key={index} color="#fdeb22" size={20} />
+              ))}
+            </div>
             <SubTitle Style="font-medium">{item.title}</SubTitle>
             <Paragraph Style="font-normal ">{item.desc}</Paragraph>
           </div>

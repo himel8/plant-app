@@ -4,7 +4,7 @@ const CustomBtn = ({ children, link }) => {
   return (
     <Link
       href={link}
-      className="bg-green-700 py-4 px-8 rounded-md text-white font-semibold text-lg"
+      className="custom__botton py-4 px-8 rounded-full text-white secondary__font font-semibold text-sm sm:text-base md:text-lg text-center"
     >
       {children}
     </Link>

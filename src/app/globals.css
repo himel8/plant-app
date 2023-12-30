@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@300;400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,12 +10,22 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+html {
+  scroll-padding-top: 120px;
+  scroll-behavior: smooth !important;
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
+  font-family: "Poppins", sans-serif;
+}
+
+.secondary__font {
+  font-family: "Montserrat", sans-serif;
 }
 
 .custom__width {
   max-width: 1200px;
+
   margin: auto;
 }
 
@@ -28,4 +40,14 @@ body {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   border: 1px solid #15803c1f;
+}
+
+.custom__botton {
+  background: linear-gradient(90deg, #ebb461, #fa8a66);
+  box-shadow: 0 10px 30px rgba(250, 137, 102, 0.2);
+}
+.custom__botton2 {
+  background: linear-gradient(90deg, #5cb38a, #7fc496);
+
+  box-shadow: 0 8px 16px rgba(102, 186, 142, 0.5);
 }

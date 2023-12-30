@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Paragraph from "./global/Paragraph";
+import PlantLogo from "./global/PlantLogo";
 import Title from "./global/Title";
 
 const GetApp = () => {
   return (
     <section>
-      <div className="custom__width py-16 flex justify-center items-center gap-10">
+      <div className="custom__width py-16 flex justify-center items-center gap-10 flex-col-reverse lg:flex-row xl:px-0 px-7">
         <div className="flex justify-center items-center gap-6 flex-col">
           <Image
             src="/images/plant-qr-footer.png"
@@ -13,7 +14,7 @@ const GetApp = () => {
             width={200}
             height={200}
           />
-          <div className="flex justify-center items-center gap-6">
+          <div className="flex justify-center items-center gap-6 flex-col sm:flex-row">
             <Image
               src="/images/plant-logo-android.png"
               alt="qr-code"
@@ -29,6 +30,7 @@ const GetApp = () => {
           </div>
         </div>
         <div className="flex flex-col gap-6">
+          <PlantLogo />
           <Title align="left">Get LeafSnap now</Title>
           <Paragraph align="left">
             Unlimited plant identification, Unlimited reminders, Unlimited plant
